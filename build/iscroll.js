@@ -1571,7 +1571,7 @@ IScroll.prototype = {
 				this._key(e);
 				break;
 			case 'click':
-				if ( !e._constructed ) {
+				if ( !e._constructed && !this.options.disableMouse ) {
 					e.preventDefault();
 					e.stopPropagation();
 				}
